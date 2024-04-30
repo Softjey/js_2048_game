@@ -1,17 +1,12 @@
 
+// eslint-disable-next-line max-len
+import { START_BUTTON_NODE, SCORE_COUNT_NODE, SCORE_RECORD_NODE, MESSAGE_NODE, BOARD_NODE, AD_NODE } from './constants.js';
 import { Board } from './classes/Board.js';
 import { StartButton } from './classes/StartButton.js';
 import { ScoreCounter } from './classes/ScoreCounter.js';
 import { Advertisement } from './classes/Advertisement.js';
 import { Message } from './classes/Message.js';
 import { EventHandler } from './classes/EventHandler.js';
-
-const AD_NODE = document.querySelector('.advertisement');
-const SCORE_COUNT_NODE = document.querySelector('.game-score');
-const SCORE_RECORD_NODE = document.querySelector('.record-score');
-const MESSAGE_NODE = document.querySelector('.message');
-const START_BUTTON_NODE = document.querySelector('.tile--button');
-const BOARD_NODE = document.querySelector('.board');
 
 const startButton = new StartButton(START_BUTTON_NODE, stopGame, startGame);
 const scoreCounter = new ScoreCounter(SCORE_COUNT_NODE, SCORE_RECORD_NODE);
